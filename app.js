@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
 
-// initialize state
+//Call get three pokemon function
 
-// set event listeners to update state and DOM
+//Console log here to know app.js is linked to HTML console.log('I work');

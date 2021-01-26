@@ -1,18 +1,20 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
+import { getPokeStats } from '../local-storage-utils.js';
+
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
+// //getPokeStats function
+// test('Get poke stats should check local storage for stats and stringify the result to return the stats or an empty array', (expect) => {
+//     //Arrange
+//     const testStats = [];
+//     // Set up your arguments and expectations
+//     const stringyStats = JSON.stringify(testStats);
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
-});
+//     localStorage.setItem('POKESTATS', stringyStats);
+
+//     const stats = getPokeStats();
+
+//     expect.equal(stats, testStats);
+// });
