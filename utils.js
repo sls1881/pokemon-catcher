@@ -5,12 +5,11 @@ import { incrementCaught, incrementSeen } from './local-storage-utils.js';
 //State for number of turns
 let numberOfTurns = 0;
 
-//Create three divs for poke images
-
-
 ////Get Random Poke function should generate three new pokemon each round
 export function getRandomPoke() {
-    const pokeMath = Math.floor(Math.random * pokemon.length);
+    const pokeMath = Math.floor(Math.random() * pokemon.length);
+
+    return pokemon[pokeMath];
 }
 
 ////Find by ID function
@@ -23,11 +22,28 @@ export function findById(id, array) {
 }
 
 ////Render pokemon image function
-export function renderPokeImage(pokeItem)
+export function renderPokeImage(pokeItem) {
 
-//Declare images to render new pokemon and source
+    //Declare images to render new pokemon and source
+    const image = document.createElement('img');
 
-//Add event listener
+    image.src = pokeItem.url_image;
+
+    image.classList.add('poke-img');
+
+    //Add event listener
+    image.addEventListener('click', () => {
+        incrementCaught(pokeItem.id);
+
+        if (numberOfTurns <= 10) {
+            getThreePoke();
+
+        } else {
+            window.location = 'results';
+        }
+    });
+    return image;
+}
 
 
 ////Get three pokemon function
@@ -40,17 +56,18 @@ export function getThreePoke() {
     let pokeTwo = getRandomPoke();
     let pokeThree = getRandomPoke();
 
-    const image1 = renderPokeImage(pokeItem);
-    const image2 = renderPokeImage(pokeItem);
-    const image3 = renderPokeImage(pokeItem);
 
     //while loop
-    while (pokeOne.id === pokeTwo.id || pokeOne.id === pokeThree || pokeTwo === pokeThree.id) {
+    while (pokeOne.id === pokeTwo.id || pokeOne.id === pokeThree.id || pokeTwo.id === pokeThree.id) {
 
         pokeOne = getRandomPoke();
         pokeTwo = getRandomPoke();
         pokeThree = getRandomPoke();
     }
+
+    const image1 = renderPokeImage(pokeOne);
+    const image2 = renderPokeImage(pokeTwo);
+    const image3 = renderPokeImage(pokeThree);
 
     incrementSeen(pokeOne.id);
     incrementSeen(pokeTwo.id);
@@ -59,7 +76,7 @@ export function getThreePoke() {
     //Store, append, and set textContent to null for div
     const div = document.getElementById('pokemon');
     div.textContent = '';
-    div.append('image1, image2, image3');
+    div.append(image1, image2, image3);
 
 }
 

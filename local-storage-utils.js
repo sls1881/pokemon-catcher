@@ -7,7 +7,7 @@ const resetPokemon = [];
 
 ////Get poke stats function should check local storage for stats and return stats or an empty array
 export function getPokeStats() {
-
+    //Store the parsed cart
     let pStats = JSON.parse(localStorage.getItem(POKESTATS));
 
     //If they don't have stats in localStorage, set the new stats (initialize it)
@@ -19,9 +19,9 @@ export function getPokeStats() {
 }
 
 //Set poke stats function should set the stats as a string to save to local storage
-export function setPokeStats(newItem) {
+export function setPokeStats(newStat) {
 
-    localStorage.setItem(POKESTATS, JSON.stringify(newItem));
+    localStorage.setItem(POKESTATS, JSON.stringify(newStat));
 }
 
 ////Increment seen function should increment if the pokemon has been seen or add a new object
@@ -29,38 +29,44 @@ export function incrementSeen(id) {
     const stats = getPokeStats();
 
     //find by id function
-    const poke = findById(stats, id);
+    const poke = findById(id, stats);
 
-    //If find by ID shows they have been seen, increment
-    if (poke) {
-        poke.seen++;
-
-        //Else add new object
-    } else {
+    //If find by ID does not find a match, initialize a new object
+    if (!poke) {
         const newStat = {
             id: id,
             seen: 1,
             caught: 0,
         };
-        setPokeStats(stats);
+        stats.push(newStat);
+
+        //Else increment
+    } else {
+        poke.seen++;
     }
+
+    setPokeStats(stats);
 }
 
 ////Increment catches function when the pokemon is caught(clicked on)
-export function incrementCaught() {
+export function incrementCaught(id) {
 
     const stats = getPokeStats();
 
     //find by ID function
-    const poke = findById(stats, id);
+    const poke = findById(id, stats);
+
+    poke.caught++;
+
+    setPokeStats(stats);
 
 }
 
 ////Clear cart reset button
-export function clearCart() {
+export function clearStorage() {
     //Stringify the cart
-    const clearCartString = JSON.stringify(resetPokemon);
+    const clearStorageString = JSON.stringify(resetPokemon);
 
     //Save cart to local storage
-    localStorage.setItem(POKESTATS, clearCartString);
+    localStorage.setItem(POKESTATS, clearStorageString);
 }
