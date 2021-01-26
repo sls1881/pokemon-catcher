@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-import { getThreePoke } from "./utils.js";
+import { getThreePoke } from './utils.js';
 
 //Call get three pokemon function
 

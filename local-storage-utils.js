@@ -1,6 +1,6 @@
 //Import functions
 import { findById } from './utils.js';
-
+import pokemon from './poke-data.js';
 //Magic string
 const POKESTATS = 'POKESTATS';
 const resetPokemon = [];
@@ -33,7 +33,10 @@ export function incrementSeen(id) {
 
     //If find by ID does not find a match, initialize a new object
     if (!poke) {
+        const dataPoke = findById(id, pokemon);
+
         const newStat = {
+            name: dataPoke.pokebase,
             id: id,
             seen: 1,
             caught: 0,

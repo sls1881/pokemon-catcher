@@ -4,18 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Pokemon Master</title>
 </head>
 
 <body>
-    <div id="seen">
+    <header>
+        <h1>Your Pokemon Master Results</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pokemon Name</th>
+                    <th>Number of times Seen</th>
+                    <th>Number of times Caught</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td class='name-data'>Bulbasaur</td>
+                    <td class='seen-data'>2</td>
+                    <td class='caught-data'>2</td>
+                </tr> -->
+            </tbody>
+            <canvas id="myChart"></canvas>
+        </table>
+    </main>
+    <section>
+        <button id='reset-button'>Play again</button>
 
-    </div>
-    <div id="caught">
-
-    </div>
-    <button #reset-button>Play again</button>
-    <script type='module' src='reset-utils.js'></script>
+    </section>
+    <script type='module' src='results.js'></script>
 </body>
 
 </html>

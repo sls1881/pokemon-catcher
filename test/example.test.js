@@ -1,20 +1,22 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
 
-import { getPokeStats } from '../local-storage-utils.js';
+import { renderResults } from '../results/render-results.js';
 
 const test = QUnit.test;
 
-// //getPokeStats function
-// test('Get poke stats should check local storage for stats and stringify the result to return the stats or an empty array', (expect) => {
-//     //Arrange
-//     const testStats = [];
-//     // Set up your arguments and expectations
-//     const stringyStats = JSON.stringify(testStats);
+test('Get poke stats should check local storage for stats and stringify the result to return the stats or an empty array', (expect) => {
 
-//     localStorage.setItem('POKESTATS', stringyStats);
+    const pokeStats = {
+        name: 'Bulbasaur',
+        id: 1,
+        seen: 2,
+        caught: 2,
+    };
 
-//     const stats = getPokeStats();
+    //Arrange
+    const expected = `<tr><td class="name-data">Bulbasaur</td><td class="seen-data">2</td><td class="caught-data">2</td></tr>`;
 
-//     expect.equal(stats, testStats);
-// });
+    const actual = renderResults(pokeStats);
+
+    expect.equal(actual.outerHTML, expected);
+});
