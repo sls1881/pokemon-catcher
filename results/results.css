@@ -3,7 +3,10 @@
 }
 
 body {
+    width: 100%;
     background-image: url('https://sgpl.ca/~/media/yrl/sprucegrove/children-department-photos/pokemon/pokemon-feat-image.ashx?la=en&hash=6CACD0CABC098D84BC4395492E72F0B9431C49FB');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body, button {
@@ -15,13 +18,38 @@ body, button {
     font-family: 'Titillium Web', sans-serif;
 }
 
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 3rem;
+}
+
+thead {
+    color: white;
+    font-size: 1.5rem;
+}
+
 table {
     width: 80%;
 }
 
+.table-data {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(160, 50%, 33%, .4);
+}
+
 td {
     border: black 1px solid;
-    text-align: center;
+    justify-self: center;
+}
+
+button {
+    background-color: var(--color3);
+    justify-items: center;
 }
 
 .name-data {
@@ -34,4 +62,15 @@ td {
 
 .caught-data {
     background-color: var(--color1);
+}
+
+.poke-img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    transition: .2s ease-out;
+}
+
+.poke-img:hover {
+    transform: scale(1.5);
 }

@@ -11,33 +11,35 @@
 </head>
 
 <body>
-    <header>
-        <h1>Your Pokemon Master Results</h1>
-    </header>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th>Pokemon Name</th>
-                    <th>Number of times Seen</th>
-                    <th>Number of times Caught</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- <tr>
+    <div class="hero">
+        <header>
+            <h1>Your Pokemon Master Results</h1>
+        </header>
+        <main class='table-data'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pokemon Name</th>
+                        <th>Number of times Seen</th>
+                        <th>Number of times Caught</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
                     <td class='name-data'>Bulbasaur</td>
                     <td class='seen-data'>2</td>
                     <td class='caught-data'>2</td>
                 </tr> -->
-            </tbody>
-        </table>
-        <br />
-        <canvas id="myChart"></canvas>
-    </main>
-    <section>
-        <button id='reset-button'>Play again</button>
+                </tbody>
+            </table>
+            <br />
+            <canvas id="myChart"></canvas>
+        </main>
+        <section>
+            <button id='reset-button'>Play again</button>
 
-    </section>
+        </section>
+    </div>
     <script type='module' src='results.js'></script>
 </body>
 
