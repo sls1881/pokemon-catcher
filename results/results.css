@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://sgpl.ca/~/media/yrl/sprucegrove/children-department-photos/pokemon/pokemon-feat-image.ashx?la=en&hash=6CACD0CABC098D84BC4395492E72F0B9431C49FB');
+}
+
+body, button {
+    --color1: hsla(281, 26%, 74%, 1);
+    --color2: rgb(235, 170, 109);
+    --color3: rgb(108, 123, 172);
+    --color4: hsla(160, 50%, 33%, 1);
+    --color5: rgb(219, 206, 88);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+table {
+    width: 80%;
+}
+
+td {
+    border: black 1px solid;
+    text-align: center;
+}
+
+.name-data {
+    background-color: var(--color4);
+}
+
+.seen-data {
+    background-color: var(--color3);
+}
+
+.caught-data {
+    background-color: var(--color1);
+}

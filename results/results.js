@@ -21,23 +21,28 @@ const pokeStats = getPokeStats();
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
+Chart.defaults.global.defaultFontColor = 'black'; //eslint-disable-line
+Chart.defaults.global.defaultFontFamily = 'Titillium Web', 'sans-serif;'; //eslint-disable-line
+
 var myChart = new Chart(ctx, { // eslint-disable-line
-    type: 'bar',
+    type: 'horizontalBar',
     data: {
         labels: makeLabelArray(pokeStats),
         datasets: [
             {
                 label: 'Number of times seen',
                 data: makeSeenArray(pokeStats),
-                backgroundColor: 'teal',
+                backgroundColor: 'rgb(229, 221, 143)',
                 borderColor: 'lightgray',
+                fontColor: 'black',
                 borderWidth: 1
             },
             {
                 label: 'Number of times caught',
                 data: makeCaughtArray(pokeStats), // DATA ARRAY GOES HERE
-                backgroundColor: 'salmon',
+                backgroundColor: 'rgb(235, 170, 109)',
                 borderColor: 'lightgray',
+                fontColor: 'black',
                 borderWidth: 1
             },
         ]
@@ -66,3 +71,4 @@ resetButton.addEventListener('click', () => {
     clearStorage();
     window.location = '../';
 });
+
