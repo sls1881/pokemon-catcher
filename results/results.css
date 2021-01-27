@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-image: url('https://wallpaperaccess.com/full/20993.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, button {
+    --color1: rgba(178, 134, 199, 0.75);
+    --color2: rgb(255, 164, 89);    
+    --color3: rgb(108, 123, 172, .75);
+    --color4: hsla(160, 50%, 33%, .75);
+    --color5: rgb(245, 242, 63);    
+    font-family: 'Sigmar One', cursive;}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: var(--color2);
+}
+
+thead {
+    font-size: 1.2rem;
+    color: var(--color5);
+}
+
+table {
+    width: 80%;
+}
+
+.table-data {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+td {
+    border: white 1px   ;
+    justify-self: center;
+    color: whitesmoke;
+}
+
+button {
+    background-color: var(--color3);
+    color: white;
+}
+
+.name-data {
+    background-color: var(--color4);
+}
+
+.seen-data {
+    background-color: var(--color3);
+}
+
+.caught-data {
+    background-color: var(--color1);
+}
+
