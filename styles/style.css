@@ -1,25 +1,17 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color1: rgba(178, 134, 199, 0.75);
+    --color2: rgb(255, 164, 89);    
+    --color3: rgb(108, 123, 172, .75);
+    --color4: hsla(160, 50%, 33%, .75);
+    --color5: rgb(235, 218, 66); 
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font-family: 'Sigmar One', cursive;
 }
 
 main {
@@ -31,7 +23,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    background-color: var(--color4);
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -42,13 +34,12 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 4px var(--color5);
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -56,14 +47,15 @@ header {
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
     box-shadow: var(--shadow);
 }
 
 
-h2 {
+h1 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: rgb(82, 81, 81);
+    text-align: center;
 }
 
 .gutter-right {
@@ -86,6 +78,7 @@ content {
 
 p {
     margin: var(--gutter);
+    color: rgb(82, 81, 81);
 }
   
 footer {
@@ -117,3 +110,14 @@ footer {
     }
 
   }
+
+  .poke-img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    transition: .2s ease-in-out;
+}
+
+.poke-img:hover {
+    transform: scale(1.5);
+}

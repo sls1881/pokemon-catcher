@@ -4,30 +4,29 @@
 
 body {
     width: 100%;
-    background-image: url('https://sgpl.ca/~/media/yrl/sprucegrove/children-department-photos/pokemon/pokemon-feat-image.ashx?la=en&hash=6CACD0CABC098D84BC4395492E72F0B9431C49FB');
+    background-image: url('https://wallpaperaccess.com/full/20993.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 body, button {
-    --color1: hsla(281, 26%, 74%, 1);
-    --color2: rgb(235, 170, 109);
-    --color3: rgb(108, 123, 172);
-    --color4: hsla(160, 50%, 33%, 1);
-    --color5: rgb(219, 206, 88);
-    font-family: 'Titillium Web', sans-serif;
-}
+    --color1: rgba(178, 134, 199, 0.75);
+    --color2: rgb(255, 164, 89);    
+    --color3: rgb(108, 123, 172, .75);
+    --color4: hsla(160, 50%, 33%, .75);
+    --color5: rgb(245, 242, 63);    
+    font-family: 'Sigmar One', cursive;}
 
 h1 {
     text-align: center;
     font-weight: bolder;
-    color: white;
     font-size: 3rem;
+    color: var(--color2);
 }
 
 thead {
-    color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--color5);
 }
 
 table {
@@ -39,17 +38,17 @@ table {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: hsla(160, 50%, 33%, .4);
 }
 
 td {
-    border: black 1px solid;
+    border: white 1px   ;
     justify-self: center;
+    color: whitesmoke;
 }
 
 button {
     background-color: var(--color3);
-    justify-items: center;
+    color: white;
 }
 
 .name-data {
@@ -64,13 +63,3 @@ button {
     background-color: var(--color1);
 }
 
-.poke-img {
-    cursor: pointer;
-    width: 200px;
-    height: 200px;
-    transition: .2s ease-out;
-}
-
-.poke-img:hover {
-    transform: scale(1.5);
-}

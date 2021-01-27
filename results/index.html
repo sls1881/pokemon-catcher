@@ -5,41 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
     <title>Pokemon Master</title>
     <link rel="stylesheet" href="results.css">
 </head>
 
 <body>
-    <div class="hero">
-        <header>
-            <h1>Your Pokemon Master Results</h1>
-        </header>
-        <main class='table-data'>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Pokemon Name</th>
-                        <th>Number of times Seen</th>
-                        <th>Number of times Caught</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr>
+    <header>
+        <h1>Your Pokemon Master Results</h1>
+    </header>
+    <main class='table-data'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pokemon Name</th>
+                    <th>Number of times Seen</th>
+                    <th>Number of times Caught</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
                     <td class='name-data'>Bulbasaur</td>
                     <td class='seen-data'>2</td>
                     <td class='caught-data'>2</td>
                 </tr> -->
-                </tbody>
-            </table>
-            <br />
-            <canvas id="myChart"></canvas>
-        </main>
-        <section>
-            <button id='reset-button'>Play again</button>
+            </tbody>
+        </table>
+        <br />
+        <canvas id="myChart"></canvas>
+    </main>
+    <section>
+        <button id='reset-button'>Play again</button>
 
-        </section>
-    </div>
+    </section>ß
     <script type='module' src='results.js'></script>
 </body>
 
